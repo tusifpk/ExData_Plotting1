@@ -6,7 +6,7 @@ df2 <- subset(df, as.Date(Date, format='%d/%m/%Y') >= as.Date("01/02/2007",forma
 
 df2$DateTime <- strptime(paste(df2$Date, df2$Time, sep=" "), "%d/%m/%Y %H:%M:%S")
 
-plot(df2$DateTime, df2$Sub_metering_1, ylab="Global Active Power (kilowatts)", type="l", xlab="", col="black")
+plot(df2$DateTime, df2$Sub_metering_1, ylab="Energy sub metering", type="l", xlab="", col="black")
 
 points(df2$DateTime, df2$Sub_metering_2, type="l", col="red")
 points(df2$DateTime, df2$Sub_metering_3, type="l", col="blue")
